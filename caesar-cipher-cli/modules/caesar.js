@@ -1,4 +1,7 @@
-const caesar = (text, shift) => {
+const caesar = (text, shift, action) => {
+    if (action = 'decode') {
+        shift = shift * -1;
+    }
     return text.split('').map(el => {
         let letter = el.charCodeAt(0);
         if ((letter >= 65) && (letter <= 90)) {
@@ -11,3 +14,4 @@ const caesar = (text, shift) => {
   };
 
   module.exports = {caesar};
+
