@@ -4,12 +4,12 @@
 
 1. Install dependencies
 
-```npm install```  
+    npm install
 
 2. Run caesar-cli-tool
 
-```node caesar-cli.js -s 4 -a encode -i ./index.txt -o ./output.txt```
-```node caesar-cli.js --shift 4 --action decode --input ./index.txt --output ./output.txt```    
+    node caesar-cli.js -s 4 -a encode -i ./index.txt -o ./output.txt
+    node caesar-cli.js --shift 4 --action decode --input ./index.txt --output ./output.txt    
 
 ## Task description
 
