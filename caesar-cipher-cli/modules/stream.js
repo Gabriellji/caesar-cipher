@@ -21,7 +21,7 @@ try {
         }
     }
 
-    const input = (args.input_file) ? fs.createReadStream(args.input_file, {flags: 'a+'}) : process.stdin;
+    const input = (args.input_file) ? fs.createReadStream(args.input_file) : process.stdin;
     const transform  = new DataTransformation();
     const output = (args.output_file) ? fs.createWriteStream(args.output_file, {flags: 'a+'}) : process.stdout;
 

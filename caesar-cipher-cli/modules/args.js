@@ -48,7 +48,9 @@ try {
     const inputFile = getArg(Args.INPUT);
     if(inputFile) {
         args.input_file = inputFile;
-    } 
+    } else {
+
+    }
     
     const outputFile = getArg(Args.OUTPUT);
     if(outputFile) {
@@ -58,7 +60,6 @@ try {
 } catch(err) {
     throw err;
 }
-
 
 
 
