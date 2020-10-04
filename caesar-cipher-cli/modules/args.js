@@ -32,10 +32,10 @@ function getAction()  {
     if(action) {
         return action;
     } else {
-        if(!action) {
-            throw Errors.INVALID_ACTION_ARG;
+        if(!getArg(Args.ACTION)) {
+            throw Errors.NO_ARGUMENT_ACTION;
         }
-        throw Errors.NO_ARGUMENT_ACTION;
+        throw Errors.INVALID_ACTION_ARG;
     }
 }
 
