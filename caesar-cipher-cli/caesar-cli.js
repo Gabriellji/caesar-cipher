@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 
 try {
   const { input, transform, output } = require('./modules/stream.js');

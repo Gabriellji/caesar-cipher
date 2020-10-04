@@ -17,10 +17,12 @@ function getArg(arg)  {
 
 function getShift() {
     const shift = getArg(Args.SHIFT);
-
     if(shift && typeof shift === 'number') {
         return shift;
     } else {
+        if(!shift) {
+            throw Errors.NO_ARGUMENT_SHIFT; 
+        }
         throw Errors.INVALID_SHIFT_ARG;
     }
 }
@@ -30,7 +32,10 @@ function getAction()  {
     if(action) {
         return action;
     } else {
-        throw Errors.INVALID_ACTION_ARG;
+        if(!action) {
+            throw Errors.INVALID_ACTION_ARG;
+        }
+        throw Errors.NO_ARGUMENT_ACTION;
     }
 }
 
