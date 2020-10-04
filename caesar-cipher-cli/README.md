@@ -8,11 +8,11 @@ npm install
 ```
 
 #### 2. Run caesar-cli-tool
-**to use stdin/ use stdout**
+*use stdin/stdout*
 ```
 node caesar-cli.js -s 4 -a encode
 ```
-**to use input and/or output file**
+*use input and/or output file*
 ``` 
 node caesar-cli.js -s 4 -a encode -i ./index.txt -o ./output.txt
 node caesar-cli.js --shift 4 --action decode --input ./index.txt --output ./output.txt
