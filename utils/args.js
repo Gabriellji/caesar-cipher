@@ -1,5 +1,5 @@
-const { Actions } = require('../utils/const.js');
-const { Errors } = require('../utils/errors.js');
+const { actions } = require('../constants/actions');
+const { errors } = require('../constants/errors');
 
 const Args = {
     SHIFT: ['s', 'shift'], 
@@ -21,21 +21,21 @@ function getShift() {
         return shift;
     } else {
         if(!shift) {
-            throw Errors.NO_ARGUMENT_SHIFT; 
+            throw errors.NO_ARGUMENT_SHIFT; 
         }
-        throw Errors.INVALID_SHIFT_ARG;
+        throw errors.INVALID_SHIFT_ARG;
     }
 }
 
 function getAction()  {
-    const action = Actions[getArg(Args.ACTION)];
+    const action = actions[getArg(Args.ACTION)];
     if(action) {
         return action;
     } else {
         if(!getArg(Args.ACTION)) {
-            throw Errors.NO_ARGUMENT_ACTION;
+            throw errors.NO_ARGUMENT_ACTION;
         }
-        throw Errors.INVALID_ACTION_ARG;
+        throw errors.INVALID_ACTION_ARG;
     }
 }
 

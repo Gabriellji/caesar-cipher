@@ -1,6 +1,6 @@
-const Actions = {
+const actions = {
     encode: 'encode',
     decode: 'decode',
 }
 
-module.exports = { Actions };
+module.exports = { actions };
