@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { Errors } = require('../utils/errors.js');
+const { errors } = require('../constants/errors');
 
 try {
     const { args } = require('./args.js');
@@ -9,7 +9,7 @@ try {
         try {
             fs.accessSync(args.input_file, fs.constants.R_OK)
         } catch {
-            throw Errors.INVALID_INPUT_FILE;
+            throw errors.INVALID_INPUT_FILE;
         }
     }
 
@@ -17,7 +17,7 @@ try {
         try {
             fs.accessSync(args.output_file, fs.constants.W_OK)
         } catch {
-            throw Errors.INVALID_OUTPUT_FILE;
+            throw errors.INVALID_OUTPUT_FILE;
         }
     }
 

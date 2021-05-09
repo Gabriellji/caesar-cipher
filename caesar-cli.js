@@ -1,7 +1,9 @@
 #! /usr/bin/env node
 
+'use strict'
+
 try {
-  const { input, transform, output } = require('./modules/stream.js');
+  const { input, transform, output } = require('./utils/stream.js');
   input.pipe(transform).pipe(output);
 
 } catch(err) {

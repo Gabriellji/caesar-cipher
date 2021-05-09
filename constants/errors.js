@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 
-const Errors = {
+const errors = {
     INVALID_SHIFT_ARG:  new Error(chalk.blue('The value of shift should be positive integer')),
     INVALID_ACTION_ARG: new Error(chalk.blue('The value of action argument shoud be encode|decode')),
     INVALID_INPUT_FILE: new Error(chalk.red('Something wrong with the ' + chalk.bold('input') + ' file or path =(')),
@@ -9,4 +9,4 @@ const Errors = {
     NO_ARGUMENT_ACTION: new Error(chalk.green('There is no the following required argument: --action')),
 }
 
-module.exports = { Errors };
+module.exports = { errors };
